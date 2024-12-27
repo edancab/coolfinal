@@ -1,0 +1,23 @@
+-- Sierra https://discord.gg/pwxJdMKq2Q
+
+local args = {
+    [1] = {
+        ["type"] = "Band",
+        ["set"] = "Numa Temple Set",
+        ["rewards"] = {
+            ["essence"] = 10,
+            ["chestMeter"] = 55,
+            ["exp"] = 5528391, -- XP varies on your level, the higher you are the more you can have
+            ["cash"] = 40000 -- Money varies on your level, the higher you are the more you can have
+        },
+        ["rewardsText"] = "$30000 | 5528391 EXP | 10 Mission Essence",  -- Don't need to change
+        ["difficulty"] = 2,
+        ["title"] = "Defeat a band",
+        ["amount"] = 1,
+        ["level"] = 400, -- Make the level higher than your current level
+        ["grade"] = "Grade 3",
+        ["subtitle"] = "of 100 curse users"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server.Data.AcceptQuest:InvokeServer(unpack(args))
